@@ -1,0 +1,90 @@
+<table>
+        <thead>
+          <tr>
+            <th>Coin</th>
+            <th>OKX</th>
+            <th>Crypto.com</th>
+            <th>Kraken</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>ETH</td>
+            <td>4.5% APY</td>
+            <td>4.0% APY</td>
+            <td>4.25% APY</td>
+          </tr>
+          <tr>
+            <td>SOL</td>
+            <td>6.0% APY</td>
+            <td>5.5% APY</td>
+            <td>5.8% APY</td>
+          </tr>
+          <tr>
+            <td>ATOM</td>
+            <td>10% APY</td>
+            <td>-</td>
+            <td>9% APY</td>
+          </tr>
+          <tr>
+            <td>USDT</td>
+            <td>5% APY</td>
+            <td>3% APY</td>
+            <td>-</td>
+          </tr>
+          <!-- add ~10 lines total as you wish -->
+        </tbody>
+      </table>
+    </section>
+
+    <!-- KYC PAGE -->
+    <section id="kyc-page" class="hidden">
+      <h1>KYC requirements</h1>
+
+      <h2>OKX</h2>
+      <ul>
+        <li>Difficulty: Easy–medium.</li>
+        <li>Typical time: 10–30 minutes for basic; up to 24 hours for full. </li>
+        <li>Documents: Passport or national ID, selfie, sometimes proof of address (utility bill or bank statement).</li>
+      </ul>
+
+      <h2>Crypto.com</h2>
+      <ul>
+        <li>Difficulty: Easy.</li>
+        <li>Typical time: 10–20 minutes; some cases up to 1 business day.</li>
+        <li>Documents: Passport or ID, selfie, proof of address if requested.</li>
+      </ul>
+
+      <h2>Kraken</h2>
+      <ul>
+        <li>Difficulty: Medium.</li>
+        <li>Typical time: 20–30 minutes; up to a few days for higher limits.</li>
+        <li>Documents: Passport or ID, selfie, proof of residence (utility bill, bank statement).</li>
+      </ul>
+
+      <p>
+        Make sure to confirm the latest KYC rules and supported countries on each platform’s official website before applying.
+      </p>
+    </section>
+  </main>
+</div>
+
+<script>
+  function showPage(page) {
+    document.getElementById('home-page').classList.add('hidden');
+    document.getElementById('staking-page').classList.add('hidden');
+    document.getElementById('kyc-page').classList.add('hidden');
+
+    if (page === 'home') document.getElementById('home-page').classList.remove('hidden');
+    if (page === 'staking') document.getElementById('staking-page').classList.remove('hidden');
+    if (page === 'kyc') document.getElementById('kyc-page').classList.remove('hidden');
+  }
+
+  function showMore(exchange) {
+    const id = 'more-' + exchange;
+    const el = document.getElementById(id);
+    el.classList.toggle('hidden');
+  }
+</script>
+</body>
+</html>
